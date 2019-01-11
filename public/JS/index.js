@@ -2,21 +2,19 @@ var $hamburger = $(".hamburger")
 $hamburger.on("click", function(e) {
 $hamburger.toggleClass("is-active")
 var active = $(".hamburger").hasClass("is-active")
-if(active){
-
-    $(".navbar").animate({bottom: "0vh"},{duration: 500})
-    $(".nav-link").animate({opacity: 1},{duration: 500})
-    $(".socialLink").animate({opacity: 1},{duration: 500})
+if($(window).width() <= 576 & active){
+    $(".nav-link").animate({opacity: 1},{duration: 1000})
     $(".navbar").css("backgroundColor", "rgba(0,0,0,.9)")
-
+    $(".navbar").animate({height: "100vh"}, {duration: 300})
+    $(".left-hookah").css("display", "none")
+    $(".socialLink").animate({opacity: 1},{duration: 1000})
 }
 else{
+    $(".socialLink").animate({opacity: 0},{duration: 200})
+    $(".left-hookah").css("display","block")
     $(".navbar").css("backgroundColor", "transparent")
-    $(".navbar").animate({bottom: "90vh"},{duration: 300})
     $(".nav-link").animate({opacity: 0},{duration: 200})
-    $(".socialLink").animate({opacity: 0},{duration: 200})   
-    $(".socialLink").css("z-index", -1)  
-
+    $(".navbar").animate({height: "10vh"}, {duration: 300})
 }
 })
 
@@ -37,67 +35,45 @@ else{
     });
       userFeed.run();
 
-       $("#load-more").on("click", function(){
+        $("#load-more").on("click", function(){
         $("#instafeed").empty()
         $("#instafeed").fadeIn(0)
 
         userFeed.next();
        })
 
+
         $("#menu").on("click", function(){
             var menuTop = $("#menuId").offset().top
-            if(window.innerWidth >= 576){
                 $(window).scrollTop(menuTop - $(window).height()/10)
-            }
-            else{
-                $(window).scrollTop(menuTop - $(window).height()/10)
-                $(".navbar").animate({bottom: "90vh"},{duration: 300})
-                $(".nav-link").animate({opacity: 0},{duration: 200})
-                $(".socialLink").animate({opacity: 0},{duration: 200})
                 $(".navbar").css("backgroundColor", "transparent")
-                $hamburger.removeClass("is-active")
-            } 
+                $(".navbar").animate({height: "10vh"},{duration: 200})
+                $(".hamburger").removeClass("is-active")
         });
-        $("#event").on("click", function(){
+        $("#calendar").on("click", function(){
             var eventTop = $("#eventId").offset().top
-            if(window.innerWidth >= 576){
-                $(window).scrollTop(menuTop - $(window).height()/10)
-            }
-            else{
                 $(window).scrollTop(eventTop - $(window).height()/10)
-                $(".navbar").animate({bottom: "90vh"},{duration: 300})
-                $(".nav-link").animate({opacity: 0},{duration: 200})
-                $(".socialLink").animate({opacity: 0},{duration: 200})
-                $hamburger.removeClass("is-active")
-}
+                $(".navbar").css("backgroundColor", "transparent")
+                $(".navbar").animate({height: "10vh"},{duration: 200})
+                $(".hamburger").removeClass("is-active")
+                if($(window).width() <= 576){
+                    $(".nav-link").animate({opacity: 0}, {duration: 200})
+                    $(".socialLink").animate({opacity: 0},{diration: 200})
+                }
         });        
         $("#gallery").on("click", function(){
             var galleryTop = $("#galleryId").offset().top
-            if(window.innerWidth >= 576){
                 $(window).scrollTop(galleryTop - $(window).height()/10)
-            }
-            else{    
-                $(window).scrollTop(galleryTop - $(window).height()/10)
-                $(".navbar").animate({bottom: "90vh"},{duration: 300})
-                $(".nav-link").animate({opacity: 0},{duration: 200})
-                $(".socialLink").animate({opacity: 0},{duration: 200})
                 $(".navbar").css("backgroundColor", "transparent")
-                $hamburger.removeClass("is-active")
-            }
+                $(".navbar").animate({height: "10vh"},{duration: 200})
+                $(".hamburger").removeClass("is-active")
         });
         $("#info").on("click", function(){
             var infoTop = $("#infoId").offset().top
-            if(window.innerWidth >= 576){            
                 $(window).scrollTop(infoTop - $(window).height()/10)
-            }
-            else{
-                $(window).scrollTop(infoTop - $(window).height()/10)
-                $(".navbar").animate({bottom: "90vh"},{duration: 300})
-                $(".nav-link").animate({opacity: 0},{duration: 200})
-                $(".socialLink").animate({opacity: 0},{duration: 200})
                 $(".navbar").css("backgroundColor", "transparent")
-                $hamburger.removeClass("is-active")
-            }
+                $(".navbar").animate({height: "10vh"},{duration: 200})
+                $(".hamburger").removeClass("is-active")
         });
 
         /*on resize set opacity to one*/
@@ -134,7 +110,7 @@ else{
                 document.getElementById("food").style.display = "flex";
             })
  
-            // Initialize and add the map
+        // Initialize and add the map
         function initMap() {
         // The location of Uluru
         var sage = {lat: 28.0367802, lng: -82.7383719};
@@ -165,12 +141,16 @@ else{
         })
 
         $(document).on("scroll", function(){
-            var scroll = $(window).scrollTop()
             var height = $(window).height()
+            var scroll = $(window).scrollTop() + height / 9
+
             if(scroll > height){
                 $(".navbar").css({"background-color": "#0c0c0c", "transition": "1s"})
+                $(".navbar").css({"border-bottom":"1px solid var(--gold)"})
             }
             else{
                 $(".navbar").css({"background-color": "transparent", "transition": "1s"})
+                $(".navbar").css("border-bottom","none")
             }
         })
+    

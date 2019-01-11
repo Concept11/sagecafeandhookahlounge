@@ -22,15 +22,11 @@
   
   <body>
 
-    <nav class="navbar d-flex navbar-light" id="navbar">
-            
-        <a href="#"> <img class="left-hookah mr-auto" src="Images/hookahBrand.png"></a>
-        <ul class="navbar-nav d-flex flex-column align-items-center justify-content-center mx-auto">
+    <nav class="navbar navbar-light row" id="navbar">
+        <a class="col-2 d-flex align-items-center" href="#"> <img class="left-hookah" src="Images/hookahBrand.png"></a>
+        <ul class="navbar-nav col-sm-8 col-12 p-0 justify-content-center align-items-center">
             <li class="nav-item">
                 <a class="nav-link" id="menu">Menus</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="gallery">Calendar</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="gallery">Gallery</a>
@@ -39,9 +35,9 @@
                 <a class="nav-link" id="info">Info</a>
             </li>
         </ul>
-        <div class="social-container">
-            <a class="socialLink instaLink" href="https://www.instagram.com/sageloungeofficial/?hl=en"><i class="fab fa-instagram fa-md"></i></a>
-            <a class="socialLink fbLink" href="https://www.facebook.com/officalSageLounge/"><i class="fab fa-facebook-square fa-md"></i></a>
+        <div class="social-container col-sm-2 col-12 d-flex pl-sm-2 pl-md-4  pr-0 justify-content-center align-items-center">
+            <a class="socialLink pr-1 instaLink" href="https://www.instagram.com/sageloungeofficial/?hl=en"><i class="fab fa-instagram fa-sm"></i></a>
+            <a class="socialLink fbLink" href="https://www.facebook.com/officalSageLounge/"><i class="fab fa-facebook-square fa-sm"></i></a>
         </div>
 
         <button class="hamburger hamburger--spin" type="button">
@@ -62,8 +58,13 @@
 
     <!--Menu head--> 
         <div class="menuContainer" id="menuId">
-            <div class="menu-header row justify-content-center">
-                <h1 class="pb-4">Menu</h1>
+            <div class="menu-header row align-items-center justify-content-center text-center flex-column ">
+                <h1 class="pb-md-4">Menu</h1>
+                <div class="mobile-head-container d-flex align-items-center"> 
+                    <h1 class="mobile-menu-head-txt" id="mobileDrink"> Drinks</h1>
+                    <h1 class="mobile-menu-head-txt" id="mobileHookah">Hookah</h1>
+                    <h1 class="mobile-menu-head-txt" id="mobileFood">Food</h1>
+                </div>
             </div>
             <div class="row">
                 <div class="menu-head-container col-3 d-flex flex-column justify-content-center align-items-center my-5"> 
@@ -77,17 +78,11 @@
                         <h1 class="menu-head-txt" id="foodbtn">Food</h1>              
                     </div>
                 </div>
-                <div class="menu-body-row col-9 align-items-around justify-content-center d-flex flex-column my-5">
-                    <div class="d-flex flex-column align-items-center">
-                        <div class="mobile-head-container d-flex align-items-center"> 
-                            <h1 class="mobile-menu-head-txt" id="mobileDrink"> Drinks</h1>
-                            <h1 class="mobile-menu-head-txt" id="mobileHookah">Hookah</h1>
-                            <h1 class="mobile-menu-head-txt" id="mobileFood">Food</h1>
-                        </div>
-                    </div>
+                <div class="menu-body-row col-12 col-md-9 align-items-around justify-content-center d-flex flex-column my-3 my-md-0">
+                    <div class="d-flex flex-column align-items-center"></div>
                     <div class="tab-container" id="hookah" data-aos="fade-up" data-aos-duration="1500">
                         <div class="hookahSlide col-4">
-                            <h4 class="menuCenteredHeader">AL FAHKER 14$</h4>
+                            <h4 class="menu-centered-header">AL FAHKER 14$</h4>
                             <p class="menuList fakherList">
                                 Blueberry Mint<br>
                                 Lemon Mint<br>
@@ -107,18 +102,18 @@
                             </p>
                         </div>
                         <div class="hookahSlide col-4">
-                            <h4 class="menuCenteredHeader">Cloud Mix 14$</h4>
+                            <h4 class="menu-centered-header">Cloud Mix 14$</h4>
                             <p class="menuList cloudList">
                             Pineapple X<br>
                             Vodka Lemonade
                             </p>
-                            <h4 class="menuCenteredHeader">HOUSE MIX 15$</h4>
+                            <h4 class="menu-centered-header">HOUSE MIX 15$</h4>
                             <P class="menuList houseList">
                             Orange Sherbert<br>
                             Diablo<br>
                             Queen of Hearts<br>
                             </P>
-                            <h4 class="menuCenteredHeader">STARBUZZ 16$</h4>
+                            <h4 class="menu-centered-header">STARBUZZ 16$</h4>
                             <p class="menuList starbuzzList">
                             Blue Mint<br>
                             Wildberry Mint<br>
@@ -130,12 +125,12 @@
                         </div>
                             
                         <div class="hookahSlide col-4">
-                            <h4 class="menuCenteredHeader">FUMARI<br>16$</h4>
+                            <h4 class="menu-centered-header">FUMARI<br>16$</h4>
                             <p class="menuList fumariList">
                                 White Gummmy bear<br>
                                 Spiced Chai<br>
                             </p>
-                            <h4 class="menuCenteredHeader">ADD ONS<br></h4>
+                            <h4 class="menu-centered-header">ADD ONS<br></h4>
                             <p class="menuList addonsList">
                                 Ice In Bowl<br>
                                 Ice Hose Small<br>
@@ -150,7 +145,7 @@
                     </div>
                     <div class="tabContainer container-fluid" id="drink" data-aos="fade-up" data-aos-duration="1500">
                         <div class="drinkSlide col-6 col-md-4">
-                            <h4 class="menuCenteredHeader">TeBella Tea<br></h4>
+                            <h4 class="menu-centered-header">TeBella Tea<br></h4>
                             <p class="menuList TeBella">
                                 White Coconut Dulce<br>
                                 Lavender Citrus sage<br>
@@ -169,7 +164,7 @@
                             </p>
                         </div>
                         <div class="drinkSlide col-6 col-md-4">
-                            <h4 class="menuCenteredHeader">Coffee<br></h4>
+                            <h4 class="menu-centered-header">Coffee<br></h4>
                             <p class="menuList coffee">
                                 Americano<br>
                                 Cappucino<br>
@@ -179,14 +174,14 @@
                     </div>
                     <div class="tabContainer container-fluid" id="food" data-aos="fade-up" data-aos-duration="1500">
                         <div class="foodSlide col-6 col-md-4">
-                            <h4 class="menuCenteredHeader">Shawarma Fusion</h4>
+                            <h4 class="menu-centered-header">Shawarma Fusion</h4>
                             <p class="menuList plates">
                                 Beef Shawarma<br>
                                 Chicken Shawarma<br>
                                 Falafel (x6)<br>
                                 Kibbeh (x4)<br>
                             </p>
-                            <h4 class="menuCenteredHeader">Sandwiches</h4>
+                            <h4 class="menu-centered-header">Sandwiches</h4>
                             <p class="menuList sandwitches">
                                 Beef Shawarma<br>
                                 Chicken Shawarma<br>
@@ -195,12 +190,12 @@
                             </p>
                         </div>
                         <div class="foodSlide col-6 col-md-4">
-                            <h4 class="menuCenteredHeader">Salads</h4>
+                            <h4 class="menu-centered-header">Salads</h4>
                             <p  class="menuList salad">
                                 house<br>
                                 caesar
                             </p>
-                            <h4 class="menuCenteredHeader">Sides</h4>
+                            <h4 class="menu-centered-header">Sides</h4>
                             <p class="menuList sides">
                                 Hummus<br>
                                 French Fries<br>
@@ -212,7 +207,7 @@
                 </div>
             </div>
         </div>
-
+  
         <div class="galleryContainer d-flex flex-column align-items-center justify-content-center" id="galleryId">
             <div class="heroImgContainer"></div>
             <div class="galleryHeader row justify-content-center">
@@ -220,7 +215,7 @@
             </div>
 
             <div class="instafeedContainer d-flex justify-content-center pb-4">
-                <div class="row justify-content-left mb-4" id="instafeed"></div>
+                <div class="row mb-4" id="instafeed"></div>
             </div>
                     
         </div>
@@ -243,7 +238,7 @@
                             <button href="#" class="directions btn btn-sm">Directions</button>
                         </div>
                     </div>
-                    <div class="hours col-lg-5 mt-5 mt-lg-2 d-flex flex-column justify-content-between">
+                    <div class="hours col-12 col-lg-5 mt-5 mt-lg-2 d-flex flex-column justify-content-between">
                         <div class="mt-4 mt-lg-0">
                             <h1>Hours</h1>
                             <p>Monday - Thursday : 5PM-2AM</p>
@@ -251,16 +246,16 @@
                             <p>Saturday : 6PM-3AM</p>
                             <p>Sunday : 5PM-2AM</p>
                         </div>
-                        <div class="px-5">
-                            <h3 class="px-5">Join our e-mail list for special deals and giveaways!</h3>
+                        <div class="join-email px-2 pt-5">
+                            <h3 class="emailh">Join our e-mail list for special deals and giveaways!</h3>
                             <p>Text : "sagelounge" to 22828</p>
                         </div>
                     </div>
                 </div>
                 <div class="faq row justify-content-center mt-5">
-                    <div class="col-6 mt-4">
+                    <div class="col-12 col-lg-6 mt-4">
                         <h1>Frequently Asked Questions</h1>
-                        <p>How old do you have to be to smoke hookah?</p>
+                        <p><p>
                     </div>
                 </div>
             </div>        
@@ -277,10 +272,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh3IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script data-cfasync="false" data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0Oo_RsUCSM4p5zgX5w3oDd6HjQibEReg&callback=initMap">
-    </script>
+    <script data-cfasync="false" data-tockify-script="embed"
+    src="https://public.tockify.com/browser/embed.js"></script>   
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="JS/index.js"></script>
 </body>
