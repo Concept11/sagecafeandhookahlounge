@@ -49,6 +49,11 @@ else{
                 $(".navbar").css("backgroundColor", "transparent")
                 $(".navbar").animate({height: "10vh"},{duration: 200})
                 $(".hamburger").removeClass("is-active")
+                if($(window).width() <= 576){
+                    $(".nav-link").animate({opacity: 0}, {duration: 200})
+                    $(".socialLink").animate({opacity: 0},{diration: 200})
+                    $(".left-hookah").css("display", "block")
+                }
         });
         $("#calendar").on("click", function(){
             var eventTop = $("#eventId").offset().top
@@ -59,6 +64,7 @@ else{
                 if($(window).width() <= 576){
                     $(".nav-link").animate({opacity: 0}, {duration: 200})
                     $(".socialLink").animate({opacity: 0},{diration: 200})
+                    $(".left-hookah").css("display", "block")
                 }
         });        
         $("#gallery").on("click", function(){
@@ -67,6 +73,11 @@ else{
                 $(".navbar").css("backgroundColor", "transparent")
                 $(".navbar").animate({height: "10vh"},{duration: 200})
                 $(".hamburger").removeClass("is-active")
+                if($(window).width() <= 576){
+                    $(".nav-link").animate({opacity: 0}, {duration: 200})
+                    $(".socialLink").animate({opacity: 0},{diration: 200})
+                    $(".left-hookah").css("display", "block")
+                }
         });
         $("#info").on("click", function(){
             var infoTop = $("#infoId").offset().top
@@ -74,6 +85,11 @@ else{
                 $(".navbar").css("backgroundColor", "transparent")
                 $(".navbar").animate({height: "10vh"},{duration: 200})
                 $(".hamburger").removeClass("is-active")
+                if($(window).width() <= 576){
+                    $(".nav-link").animate({opacity: 0}, {duration: 200})
+                    $(".socialLink").animate({opacity: 0},{diration: 200})
+                    $(".left-hookah").css("display", "block")
+                }
         });
 
         /*on resize set opacity to one*/
@@ -145,11 +161,11 @@ else{
             var scroll = $(window).scrollTop() + height / 9
 
             if(scroll > height){
-                $(".navbar").css({"background-color": "#0c0c0c", "transition": "1s"})
+                $(".navbar").css({"background-color": "#0c0c0c"})
                 $(".navbar").css({"border-bottom":"1px solid var(--gold)"})
             }
             else{
-                $(".navbar").css({"background-color": "transparent", "transition": "1s"})
+                $(".navbar").css({"background-color": "transparent"})
                 $(".navbar").css("border-bottom","none")
             }
         })
