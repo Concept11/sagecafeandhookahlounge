@@ -237,6 +237,9 @@ a{
 /*gallery*/
 .galleryContainer{
     min-height: 100vh;
+}
+.gallery-header{
+    font-size: 2.3em;
 } 
 .galleryHeader{
     font-family: buford;
@@ -373,7 +376,9 @@ a {
 }
 
 @media (min-width: 576px) { 
-
+    .gallery-header{
+        font-size: 3em;
+    }
     .hamburger{
         display: none !important;
     }

@@ -36,13 +36,6 @@ else{
     });
       userFeed.run();
 
-        $("#load-more").on("click", function(){
-        $("#instafeed").empty()
-        $("#instafeed").fadeIn(0)
-
-        userFeed.next();
-       })
-
 
         $("#menu").on("click", function(){
             var menuTop = $("#menuId").offset().top
@@ -55,7 +48,7 @@ else{
                     $(".socialLink").animate({opacity: 0},{diration: 200})
                     $(".left-hookah").css("display", "block")
                 }
-
+            })
         $("#calendar").on("click", function(){
             var eventTop = $("#eventId").offset().top
                 $(window).scrollTop(eventTop - $(window).height()/10)
@@ -67,7 +60,7 @@ else{
                     $(".socialLink").animate({opacity: 0},{diration: 200})
                     $(".left-hookah").css("display", "block")
                 }
-        });        
+        })      
         $("#gallery").on("click", function(){
             var galleryTop = $("#galleryId").offset().top
                 $(window).scrollTop(galleryTop - $(window).height()/10)
@@ -79,7 +72,7 @@ else{
                     $(".socialLink").animate({opacity: 0},{diration: 200})
                     $(".left-hookah").css("display", "block")
                 }
-        });
+        })
         $("#info").on("click", function(){
             var infoTop = $("#infoId").offset().top
                 $(window).scrollTop(infoTop - $(window).height()/10)
@@ -170,4 +163,3 @@ else{
                 $(".navbar").css({"border-bottom":"none"})
             }
         })
-    })
