@@ -50,6 +50,9 @@ else{
                 $(".navbar").animate({height: "10vh"},{duration: 200})
                 $(".hamburger").removeClass("is-active")
                 if($(window).width() <= 576){
+                    document.querySelector('#galleryId').scrollIntoView({ 
+                        behavior: 'smooth' 
+                      });                    
                     $(".nav-link").animate({opacity: 0}, {duration: 200})
                     $(".socialLink").animate({opacity: 0},{diration: 200})
                     $(".left-hookah").css("display", "block")
@@ -77,6 +80,9 @@ else{
                     $(".nav-link").animate({opacity: 0}, {duration: 200})
                     $(".socialLink").animate({opacity: 0},{diration: 200})
                     $(".left-hookah").css("display", "block")
+                    $('html, body').animate({
+                        scrollTop: $("#galleryId").offset().top
+                     }, 2000);
                 }
         });
         $("#info").on("click", function(){
