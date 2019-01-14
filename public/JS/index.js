@@ -16,6 +16,7 @@ else{
     $(".nav-link").animate({opacity: 0},{duration: 200})
     $(".navbar").animate({height: "10vh"}, {duration: 300})
 }
+
 })
 
 
@@ -50,14 +51,11 @@ else{
                 $(".navbar").animate({height: "10vh"},{duration: 200})
                 $(".hamburger").removeClass("is-active")
                 if($(window).width() <= 576){
-                    document.querySelector('#galleryId').scrollIntoView({ 
-                        behavior: 'smooth' 
-                      });                    
                     $(".nav-link").animate({opacity: 0}, {duration: 200})
                     $(".socialLink").animate({opacity: 0},{diration: 200})
                     $(".left-hookah").css("display", "block")
                 }
-        });
+
         $("#calendar").on("click", function(){
             var eventTop = $("#eventId").offset().top
                 $(window).scrollTop(eventTop - $(window).height()/10)
@@ -80,9 +78,6 @@ else{
                     $(".nav-link").animate({opacity: 0}, {duration: 200})
                     $(".socialLink").animate({opacity: 0},{diration: 200})
                     $(".left-hookah").css("display", "block")
-                    $('html, body').animate({
-                        scrollTop: $("#galleryId").offset().top
-                     }, 2000);
                 }
         });
         $("#info").on("click", function(){
@@ -96,7 +91,7 @@ else{
                     $(".socialLink").animate({opacity: 0},{diration: 200})
                     $(".left-hookah").css("display", "block")
                 }
-        });
+        })
 
         /*on resize set opacity to one*/
             document.getElementById("hookahbtn").addEventListener("click",function(){
@@ -172,7 +167,7 @@ else{
             }
             else{
                 $(".navbar").css({"background-color": "transparent"})
-                $(".navbar").css("border-bottom","none")
+                $(".navbar").css({"border-bottom":"none"})
             }
         })
-    
+    })
