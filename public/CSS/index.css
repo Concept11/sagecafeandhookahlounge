@@ -467,7 +467,9 @@ a {
     #map {
         width: 100%;
     }
-    
+    .social-container{
+        padding-left: 100px !important;
+    }
     .hours::before {
         content:none;
         width: 0px;
