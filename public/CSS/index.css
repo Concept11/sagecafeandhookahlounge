@@ -112,7 +112,6 @@ a{
 .heroImgContainer{
     background: url("../Images/hero3.jpg");
     background-size: cover;
-    background-attachment: fixed;
     width: 100vw;
     position: absolute;
     height: 110%;
@@ -149,6 +148,9 @@ a{
     border-right: 3px double var(--lightGold);
     display: none !important;
 }
+.tab-container{
+    padding: 20px 0 20px;
+}
 
 .mobile-head-container{
     font-family: haymaker;
@@ -160,6 +162,7 @@ a{
     padding-right: 15px;
     font-size: 25px !important;
     color: var(--white);
+    z-index: 2;
 }
 .mobile-menu-head-txt:hover{
     color: var(--gold);
@@ -347,24 +350,17 @@ a {
     text-decoration: none;
     color: (--brown) !important;
 }
-.hoursEmailContainer{
-    padding-top: 60px;
-}
-.email{
+.join-email{
     font-size: .7em;
-    color: var(--gold);
-    padding-bottom: 1rem;
-    margin: 0;
-}
-.eighteenUp{
-    font-size: .6em;
 }
 
 .bottom {
     height: 100px;
     min-height: 100px;
 }
-
+.faq{
+    font-size:.9em;
+}
 .hours::before {
     content:"";
     width: 90%;
@@ -380,9 +376,12 @@ a {
 }
 
 @media (min-width: 576px) { 
+    .mobile-menu-head-txt{
+        z-index: -1;
+    }
     .social-container{
         z-index: 1;
-        padding-left: 30px;
+        padding-left: 20px;
     }
     .gallery-header{
         font-size: 3em;
@@ -397,11 +396,12 @@ a {
     }
     .navbar-nav{
         margin-left: -15px;
+        z-index: -1;
     }
     .heroImgContainer{
         background: url("../Images/hero3.jpg");
         background-size: cover;
-        background-attachment: initial;
+        background-attachment: fixed;
         width: 100vw;
         position: absolute;
         height: 110%;
@@ -457,7 +457,12 @@ a {
  }
 
 @media (min-width: 768px) { 
-
+    .join-email{
+        font-size: .9em;
+    }
+    .faq{
+        font-size: 1em;
+    }
     #instafeed img{
         padding: 2px 2px 2px 2px;
     }
@@ -514,6 +519,20 @@ a {
         padding-left: 130px;
     }
     .menuContainer{
-        font-size: 1.9rem;
+        font-size: 1.6rem;
     }
+ }
+ @media (min-width: 1440px){
+     .menuContainer{
+         font-size: 2.3rem;
+     }
+     .infoContainer{
+        font-size: 2rem;
+     }
+     .navbar{
+         font-size: 3em;
+     }
+     .left-hookah{
+         height: 70px;
+     }
  }

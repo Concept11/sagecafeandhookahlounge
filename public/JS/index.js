@@ -8,19 +8,20 @@ if($(window).width() <= 576 & active){
     $(".navbar").animate({height: "100vh"}, {duration: 300})
     $(".left-hookah").css("display", "none")
     $(".socialLink").animate({opacity: 1},{duration: 1000})
+    $(".nav-link").css("z-index", "2")
+    $(".mobile-menu-head-txt").css("z-index", "0")
 }
 else{
+    $(".mobile-menu-head-txt").css("z-index", "2")
     $(".socialLink").animate({opacity: 0},{duration: 200})
     $(".left-hookah").css("display","block")
     $(".navbar").css("backgroundColor", "transparent")
     $(".nav-link").animate({opacity: 0},{duration: 200})
     $(".navbar").animate({height: "10vh"}, {duration: 300})
+    $(".nav-link").css("z-index","-1")
 }
 
 })
-
-
-
     var userFeed = new Instafeed({
     get: 'user',
     target: 'instafeed',
