@@ -8,11 +8,11 @@ if($(window).width() <= 576 & active){
     $(".navbar").animate({height: "100vh"}, {duration: 300})
     $(".left-hookah").css("display", "none")
     $(".socialLink").animate({opacity: 1},{duration: 1000})
-    $(".nav-link").css("z-index", "2")
+    $(".nav-link").css("z-index", "1")
     $(".mobile-menu-head-txt").css("z-index", "0")
 }
 else{
-    $(".mobile-menu-head-txt").css("z-index", "2")
+    $(".nav-link").css("z-index", "2")
     $(".socialLink").animate({opacity: 0},{duration: 200})
     $(".left-hookah").css("display","block")
     $(".navbar").css("backgroundColor", "transparent")
@@ -156,10 +156,12 @@ else{
             var scroll = $(window).scrollTop() + height / 9
 
             if(scroll > height){
+                $(".mobile-menu-head-txt").css("z-index", "0")
                 $(".navbar").css({"background-color": "#0c0c0c"})
                 $(".navbar").css({"border-bottom":"1px solid var(--gold)"})
             }
             else{
+                $(".mobil-menu-head-txt").css("z-index", "1")
                 $(".navbar").css({"background-color": "transparent"})
                 $(".navbar").css({"border-bottom":"none"})
             }

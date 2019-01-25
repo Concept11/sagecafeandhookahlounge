@@ -59,7 +59,7 @@ a{
     left: 0;
     top: 0;
     width: 100vw;
-    z-index: 2;
+    z-index: 1;
     padding: 0;
 }
 
@@ -162,7 +162,7 @@ a{
     padding-right: 15px;
     font-size: 25px !important;
     color: var(--white);
-    z-index: 2;
+    z-index: 1;
 }
 .mobile-menu-head-txt:hover{
     color: var(--gold);
