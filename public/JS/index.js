@@ -4,14 +4,16 @@ $hamburger.toggleClass("is-active")
 var active = $(".hamburger").hasClass("is-active")
 if($(window).width() <= 576 & active){
     $(".nav-link").animate({opacity: 1},{duration: 1000})
-    $(".navbar").css("backgroundColor", "rgba(0,0,0,.9)")
+    $(".navbar").css("backgroundColor", "#0E1717")
     $(".navbar").animate({height: "100vh"}, {duration: 300})
     $(".left-hookah").css("display", "none")
     $(".socialLink").animate({opacity: 1},{duration: 1000})
     $(".nav-link").css("z-index", "1")
     $(".mobile-menu-head-txt").css("z-index", "0")
+    $(".nav-link, .social-link").css("visibility", "visible")
 }
 else{
+    $(".nav-link, .social-link").css("visibility", "hidden")
     $(".nav-link").css("z-index", "2")
     $(".socialLink").animate({opacity: 0},{duration: 200})
     $(".left-hookah").css("display","block")
@@ -22,22 +24,6 @@ else{
 }
 
 })
-    var userFeed = new Instafeed({
-    get: 'user',
-    target: 'instafeed',
-    userId:   8944748990,
-    limit: 10,
-    resolution: 'standard_resolution',
-    sortby: 'most-recent',
-    accessToken: '8944748990.1677ed0.31a4371cbc5348f3b524210929d55b32',
-    template: '<div class="overlayContainer col-4 d-flex justify-content-center align-items-center">' + 
-                '<a href="{{link}}" target="_blank"> <img src="{{image}}"/> </a>' +
-                '<div class="overlay"></div>' +
-                '</div>'
-    });
-      userFeed.run();
-
-
         $("#menu").on("click", function(){
             var menuTop = $("#menuId").offset().top
                 $(window).scrollTop(menuTop - $(window).height()/10)
@@ -157,7 +143,7 @@ else{
 
             if(scroll > height){
                 $(".mobile-menu-head-txt").css("z-index", "0")
-                $(".navbar").css({"background-color": "#0c0c0c"})
+                $(".navbar").css({"background-color": "#0E1717"})
                 $(".navbar").css({"border-bottom":"1px solid var(--gold)"})
             }
             else{

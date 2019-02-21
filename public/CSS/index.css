@@ -44,6 +44,10 @@ body{
 a{
     color: var(--lightGold);
 }
+p{
+    padding: 0;
+    margin: 0;
+}
 
 
 
@@ -110,7 +114,7 @@ a{
     width: auto;
 }
 .heroImgContainer{
-    background: url("../Images/hero3.jpg");
+    background: url("../Images/hero3-compressor.jpg");
     background-size: cover;
     width: 100vw;
     position: absolute;
@@ -192,9 +196,8 @@ a{
     color: var(--gold);
 }
 .menu-head-txt{
-    font-size: 2em;
-    padding-right: 7px;
-    padding-left: 7px;
+    font-size: 1.8em;
+    padding-right: 20px;
     color: var(--white);
 }
 .menu-head-txt:hover{
@@ -227,9 +230,10 @@ a{
 
 /*events*/
 .eventsContainer{
+
     z-index: 2;
     min-height: calc(100vh - 72.5px);
-    box-shadow: 0 -20px 90px black;
+    box-shadow: 0 0px 90px black;
     background-color: #CCB17C;
 }
 .eventCalendar{
@@ -240,45 +244,23 @@ a{
 /*gallery*/
 .galleryContainer{
     min-height: 100vh;
+    font-size: 1rem;
 }
-.gallery-header{
-    font-size: 2.3em;
-} 
-.galleryHeader{
-    font-family: buford;
-    font-size: 2em;
-    color: var(--lightGold);
-    text-shadow: 5px 5px black;
-}
-.instafeedContainer{
-    width: 100vw; 
-}
-#instafeed{
-    width: 93vw;
-    height: 63vh;
-}
-
-.overlayContainer{
+.gallery-txt{
+    font-size: 5em;
     width: auto;
-    height: auto;
-    padding: 0;
-    margin: 0;
+}  
+.photo-container{
+    display: inline-block;
+    width: 20vw;
+    height: 20vh;
 }
-#instafeed img{
-    z-index: 0;
-    width: 31vw;
-    height: 21vh;
-    padding: 1px 1px 1px 1px;
+.photo-container img{
+    width: auto;
+    height: 60vh;
     object-fit: cover;
+    margin: 5px;
 }
-#instafeed img:hover{
-    filter: sepia(60%);
-}
-p{
-    padding: 0;
-    margin: 0;
-}
-
 
 
 
@@ -289,6 +271,10 @@ p{
     background-color: var(--black);
     color: var(--white);
     box-shadow: 0 -20px 90px black
+}
+.infoContainer img{
+    width: 60vw;
+    height: auto;        
 }
 .info-header{
     font-family: buford;
@@ -328,21 +314,7 @@ h4 {
 .addressContactContainer{
     padding: 0 0 15px;
 }
-
-#map{
-    margin-top: 30px;
-    height: 40vh;
-    width: 80%;
-}
-.map{
-    width: 100%;
-    height: 40vh;
-}
-
-.address{
-    margin: 0;
-}
-.contact{
+.address, .contact{
     margin: 0;
     padding: 0;
 }
@@ -382,9 +354,6 @@ a {
     .social-container{
         z-index: 1;
         padding-left: 20px;
-    }
-    .gallery-header{
-        font-size: 3em;
     }
     .hamburger{
         display: none !important;
@@ -441,14 +410,9 @@ a {
     #instafeed img{
         height: 25vh;
     }
-    .map-container{
-        padding: 0 !important;
-    }
-    .infoContainer{
-        font-size: 1rem;
-    }
-    .eventCalendar{
-        width: 75vw;
+    .infoContainer img{
+        width: 50vw;
+        height: auto;        
     }
     .addressContactContainer{
         text-align: left !important;
@@ -475,6 +439,10 @@ a {
     .infoContainer{
         justify-content: around;
     }
+    .infoContainer img{
+        width: 45vw;
+        height: auto;        
+    }
     .info-div{
         flex-direction: row !important;
     }
@@ -491,10 +459,10 @@ a {
     .social-container{
         padding-left: 90px;
     }
-    .map {
-        width: 100%;
-        height: 40vh;
-    }
+    .infoContainer img{
+        width: 35vw;
+        height: auto;        
+    }    
     .hours::before {
         content:none;
         width: 0px;
